@@ -104,10 +104,24 @@ header > .container {
 
     letter-spacing: 0.02em;
     color: var(--first-primary-color);
+
+    position: relative;
 }
 
 .header-nav-link.current {
     color: var(--accent-color);
+}
+
+.header-nav-link.current::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: var(--accent-color);
+    border-radius: 2px;
+
+    position: absolute;
+    bottom: -1px;
 }
 
 .header-contact-list {
