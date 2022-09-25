@@ -143,7 +143,6 @@ header > .container {
     display: flex;
     padding-top: 32px;
     padding-bottom: 32px;
-    margin-left: 10px;
 
     letter-spacing: 0.02em;
     line-height: 1.14;
@@ -252,11 +251,6 @@ section.no-bottom-padding {
 
     background-color: var(--additional-background-color);
     border-radius: 4px;
-}
-
-.advantages-icon {
-    width: 70px;
-    height: 70px;
 }
 
 .advantages-list-title {
@@ -371,8 +365,6 @@ section.no-bottom-padding {
 }
 
 .socials-icon {
-    width: 20px;
-    height: 20px;
     fill: currentColor;
 }
 
@@ -412,8 +404,6 @@ section.no-bottom-padding {
 }
 
 .clients-icon {
-    width: 106px;
-    height: 60px;
     fill: currentColor;
 }
 
@@ -540,8 +530,6 @@ section.no-bottom-padding {
 }
 
 .close-btn-icon {
-    width: 11px;
-    height: 11px;
     fill: currentColor;
 }
 
@@ -592,10 +580,12 @@ section.no-bottom-padding {
 
 .projects-link {
     display: block;
+    outline: none;
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.projects-link:hover, 
+.projects-link:hover,
+.projects-link:focus,
 .projects-link:focus .projects-descr-container {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
@@ -615,8 +605,12 @@ section.no-bottom-padding {
     position: absolute;
     left: 0;
     top: 0;
-    transform: translateY(100%);
+    transform: translateY(101%);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.projects-descr-wrapper img {
+    display: block;
 }
 
 .projects-item:hover .projects-descr-wrapper {
