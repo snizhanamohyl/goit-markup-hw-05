@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"/>
     <link rel="stylesheet" href="./css/styles.css"/>
 </head>
-<body>
+<body no-scroll>
     <header class="header">
         <div class="container">
             <nav class="header-nav">
@@ -46,7 +46,7 @@
         <!-- Hero Section -->
         <section class="hero other-paddings">
             <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
-            <button class="hero-btn" type="button">Замовити послугу</button>
+            <button class="hero-btn" type="button" data-modal-open>Замовити послугу</button>
         </section>
         <!-- Our Advantages Section -->
         <section class="advantages no-bottom-padding">
@@ -380,5 +380,15 @@
             </div>
         </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <button class="close-btn" data-modal-close>
+                <svg class="close-btn-icon">
+                    <use href="./images/svg/icons.svg#icon-close-btn"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+    <script src="./js/modal.js"></script>
 </body>
 </html>
