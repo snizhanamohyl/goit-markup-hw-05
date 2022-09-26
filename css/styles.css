@@ -9,6 +9,8 @@
     --additional-background-color: #F5F4FA;
     --active-btn-color: #188CE8;
     --icon-color: #AFB1B8;
+    --transition-time: 250ms;
+    --transition-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* body */
 body {
@@ -21,7 +23,7 @@ body {
 /* link */
 .link {
     text-decoration: none;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color var(--transition-time) var(--transition-function);
 }
 
 button {
@@ -221,7 +223,7 @@ section.no-bottom-padding {
     background-color: var(--accent-color);
     color: var(--white);
     cursor: pointer;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color var(--transition-time) var(--transition-function);
     
 }
 .hero-btn:hover, .hero-btn:focus {
@@ -355,7 +357,7 @@ section.no-bottom-padding {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color var(--transition-time) var(--transition-function), background-color var(--transition-time) var(--transition-function);
 }
 
 .socials-link.link:hover,
@@ -394,7 +396,7 @@ section.no-bottom-padding {
     color:  var(--icon-color);
     border: 1px solid var(--icon-color);
     border-radius: 4px; 
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color var(--transition-time) var(--transition-function), border-color var(--transition-time) var(--transition-function);
 }
 
 .clients-link:hover,
@@ -495,6 +497,8 @@ section.no-bottom-padding {
     top: 0;
     left: 0;
     background: rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    transition: opacity var(--transition-time) var(--transition-function);
 }
 
 .modal {
@@ -510,6 +514,9 @@ section.no-bottom-padding {
 .close-btn {
     width: 30px;
     height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     color: var(--black);
     background: var(--white);
@@ -521,21 +528,20 @@ section.no-bottom-padding {
     right: 8px;
 
     cursor: pointer;
+    transition: color var(--transition-time) var(--transition-function)
 }
 
 .close-btn:hover, 
 .close-btn:focus {
-    color: var(--white);
-    background-color: var(--accent-color);
+    color: var(--accent-color);
 }
 
 .close-btn-icon {
     fill: currentColor;
 }
 
-.is-hidden {
+.backdrop.is-hidden {
     opacity: 0;
-    visibility: hidden;
     pointer-events: none;
 }
 
@@ -581,7 +587,7 @@ section.no-bottom-padding {
 .projects-link {
     display: block;
     outline: none;
-    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: box-shadow var(--transition-time) var(--transition-function);
 }
 
 .projects-link:hover,
@@ -606,7 +612,7 @@ section.no-bottom-padding {
     left: 0;
     top: 0;
     transform: translateY(101%);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform var(--transition-time) var(--transition-function);
 }
 
 .projects-descr-wrapper img {
@@ -659,7 +665,7 @@ section.no-bottom-padding {
     cursor: pointer;
     border-radius: 4px;
     border: none;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color var(--transition-time) var(--transition-function), color var(--transition-time) var(--transition-function), box-shadow var(--transition-time) var(--transition-function);
 }
 .projects-btn.main-btn {
     padding: 6px 25px;
